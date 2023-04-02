@@ -1,6 +1,6 @@
-import { LitElement, css, html } from 'lit'
+import { html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { TailwindElement } from '../shared/tailwind.element'
+import { TailwindClass } from '../shared/tailwind.element'
 
 import style from './my-button.scss?inline'
 /**
@@ -14,8 +14,9 @@ interface Properties {
   title: string
   disabled: boolean
 }
+
 @customElement('my-button')
-export class MyButton extends TailwindElement(style) implements Properties {
+export class MyButton extends TailwindClass(style) implements Properties {
   @property()
   type = 'button'
 
